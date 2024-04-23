@@ -18,10 +18,18 @@ const result= x+y;
 
 
 
+// find the random number from 1 to 5
+
 let random = Math.floor(Math.random()*5 +1)
 console.log(random)
 if(random<3){
   console.log("lesser than 3")
-}else{
+}else  if (random===3){
+  console.log("equal")
+}
+else{
   console.log("greater")
 }
+
+
+
