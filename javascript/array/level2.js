@@ -50,3 +50,42 @@ function randomAlphanumeric(length){
    return generatedChar
 }
 console.log(randomAlphanumeric(6))
+
+
+//Q2 Remove a specific element 2 from the array. Log the modified array to the console.
+// expected output: [3,5]
+
+const arr=[3,5,2]
+
+const elementToRemove = 2;
+  
+ const modifiedArr=arr.filter(element=>element!==elementToRemove)
+ console.log(modifiedArr)
+
+
+ //find intersection (common elements) of arr and arr2
+//expected output: [5]
+const arr1=[3,5,2]
+const arr2 = [5,21,32]
+
+// method 1
+
+// let common= []
+// for(let element of arr1){
+//    if(arr2.includes(element)){
+//     common.push(element)
+//    }
+// }
+// console.log(common)
+
+// method 2 
+let intersection=[]
+for(let i=0; i<arr1.length; i++){
+   for(let j=0; j<arr2.length; j++){
+      if(arr1[i]===arr2[j]){
+         intersection.push(arr1[i])
+         break
+      }
+   }
+}
+console.log(intersection)
