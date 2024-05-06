@@ -15,10 +15,11 @@ const page = () => {
   const generateDigits = () => {
     return digits.map((digit) => {
       return (
-        <div className="flex  ">
+        <div  className="flex  ">
           {digit.map((val) => {
             return (
               <div
+               
                 onClick={() => setInput((pre) => pre + val)}
                 className="bg-gray-500 hover:bg-yellow-500 m-2 w-10 h-10 rounded text-white text-center cursor-pointer"
               >

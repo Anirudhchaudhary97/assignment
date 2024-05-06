@@ -56,6 +56,13 @@ export default function Home() {
   // };
 
   const handleBtnClick=(value)=>{
+    const operators = ["+", "-", "*", "/","%","."];
+    const lastChar = input[input.length - 1];
+    
+    const isLastCharSymbol = operators.includes(lastChar);
+  
+    const isNewSymbol = operators.includes(value);
+
     if(value==="C"){
       setInput("")
     }else if (value==="X"){
@@ -64,6 +71,8 @@ export default function Home() {
              setInput(eval(input).toString())
              // another way 
       // calculateResult(input)
+    } else if(isLastCharSymbol && isNewSymbol){
+      return
     }
     else{
 
@@ -77,34 +86,34 @@ export default function Home() {
       <div className="calc">
         <h1 id="input">{input}</h1>
         <div>
-          <button onClick={()=>handleBtnClick("C")}>C</button>
-          <button onClick={()=>handleBtnClick("X")}>X</button>
-          <button onClick={()=>handleBtnClick("%")}>%</button>
-          <button onClick={()=>handleBtnClick("/")}>/</button>
+          <button className="btn" onClick={()=>handleBtnClick("C")}>C</button>
+          <button className="btn" onClick={()=>handleBtnClick("X")}>X</button>
+          <button className="btn" onClick={()=>handleBtnClick("%")}>%</button>
+          <button className="btn" onClick={()=>handleBtnClick("/")}>/</button>
         </div>
         <div>
-          <button onClick={()=>handleBtnClick("7")}>7</button>
-          <button onClick={()=>handleBtnClick("8")}>8</button>
-          <button onClick={()=>handleBtnClick("9")}>9</button>
-          <button onClick={()=>handleBtnClick("*")}>*</button>
+          <button className="btn" onClick={()=>handleBtnClick("7")}>7</button>
+          <button className="btn" onClick={()=>handleBtnClick("8")}>8</button>
+          <button className="btn" onClick={()=>handleBtnClick("9")}>9</button>
+          <button className="btn" onClick={()=>handleBtnClick("*")}>*</button>
         </div>
         <div>
-          <button onClick={()=>handleBtnClick("4")}>4</button>
-          <button onClick={()=>handleBtnClick("5")}>5</button>
-          <button onClick={()=>handleBtnClick("6")}>6</button>
-          <button onClick={()=>handleBtnClick("-")}>-</button>
+          <button className="btn" onClick={()=>handleBtnClick("4")}>4</button>
+          <button className="btn" onClick={()=>handleBtnClick("5")}>5</button>
+          <button className="btn" onClick={()=>handleBtnClick("6")}>6</button>
+          <button className="btn" onClick={()=>handleBtnClick("-")}>-</button>
         </div>
         <div>
-          <button onClick={()=>handleBtnClick("1")}>1</button>
-          <button onClick={()=>handleBtnClick("2")}>2</button>
-          <button onClick={()=>handleBtnClick("3")}>3</button>
-          <button onClick={()=>handleBtnClick("+")}>+</button>
+          <button className="btn" onClick={()=>handleBtnClick("1")}>1</button>
+          <button className="btn" onClick={()=>handleBtnClick("2")}>2</button>
+          <button  className="btn" onClick={()=>handleBtnClick("3")}>3</button>
+          <button className="btn" onClick={()=>handleBtnClick("+")}>+</button>
         </div>
         <div>
-          <button onClick={()=>handleBtnClick("0")}>0</button>
-          <button onClick={()=>handleBtnClick("00")}>00</button>
-          <button onClick={()=>handleBtnClick(".")}>.</button>
-          <button onClick={()=>handleBtnClick("=")}>=</button>
+          <button className="btn" onClick={()=>handleBtnClick("0")}>0</button>
+          <button className="btn" onClick={()=>handleBtnClick("00")}>00</button>
+          <button className="btn" onClick={()=>handleBtnClick(".")}>.</button>
+          <button className="btn" onClick={()=>handleBtnClick("=")}>=</button>
         </div>
       </div>
     </div>
