@@ -1,4 +1,5 @@
 import NavBar from '@/components/navbar/NavBar';
+import Link from 'next/link';
 import React from 'react';
 
 const LoginForm = () => {
@@ -51,7 +52,7 @@ const LoginForm = () => {
           </div>
         </form>
         <div className="text-center">
-          <p className="text-sm text-gray-600">Don't have an account? <a href="#" className="font-medium text-indigo-600 hover:text-indigo-500">Sign up</a></p>
+          <p className="text-sm text-gray-600">Don't have an account? <Link href="/register" className="font-medium text-indigo-600 hover:text-indigo-500">Sign up</Link></p>
         </div>
       </div>
     </div>
