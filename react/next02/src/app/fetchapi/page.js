@@ -17,6 +17,7 @@ const page = () => {
       <div>
         {data ? (
           <div>
+            {/* {data.map((item)=>)} */}
             <ul>
               <li>Name:{data.email}</li>
             </ul>
